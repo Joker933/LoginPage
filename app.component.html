@@ -4,17 +4,21 @@
           <br>
       </div>
       <div id="herni_pole">
-        <div id="prihlaseni">
+        <div *ngIf="logged === false" id="prihlaseni">
           <h1>Hello User!</h1>
           <form>
-            <input type="text" name="username" placeholder="Jmeno" [(ngModel)]="username"/>
-            <input type="password" name="password" placeholder="Heslo" [(ngModel)]="password"/>
+            <input type="text" name="username" placeholder="Jmeno" [(ngModel)]="username" class='username'/>
+            <input type="password" name="password" placeholder="Heslo" [(ngModel)]="password" class='password'/>
           </form>
           <button (click)="clickedButton()">LOGIN</button>
-          <div class="vysledek">
-            {{vysledek}}
         </div>
+        <div *ngIf="logged === true" id="vysledek">
+          <h2>Logged In!</h2>
+          {{vysledek}}
       </div>
-      <p>Made by VojtaKKT</p>
+      <div *ngIf="logged === false" id="vysledek2">
+        <h3>Zadej správné přihlašovací údaje!</h3>
+    </div>
+    <p>Made by VojtaKKT</p>
   </div>
 </div> 

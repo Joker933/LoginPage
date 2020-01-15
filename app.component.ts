@@ -11,12 +11,13 @@ export class AppComponent {
   private username = "";
   private password = "";
   private vysledek = "";
+  private logged = false;
 
   clickedButton() {
     if(this.username === "Vojtech" && this.password === "Nemec"){
-      this.vysledek = "Logged In";
+      this.logged = true;
     } else {
-      this.vysledek = "Incorrect Password";
+      this.logged = false;
     }
   }
 }

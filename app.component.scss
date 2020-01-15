@@ -65,15 +65,38 @@
     transition: all 0.3 ease;
     cursor: pointer;
   }
-  .vysledek {
+  div#vysledek {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 15px 0 0;
     color: #b3b3b3;
-    font-size: 20px;
+    font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+
+  div#vysledek2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @keyframes shake {
+    0% { left: -5px; }
+    100% { right: -5px; }
+  }
+
+  .error {
+    position: relative;
+    animation: shake .1s linear;
+    animation-iteration-count: 3;
   }
 
   div#herni_pole {
@@ -142,21 +165,6 @@
       align-items: center;
       font-size: 200%;
       background-color: black; /* For browsers that do not support gradients */
-      background-size: 1800% 1800%;
-      border: #000 1px solid;
-      border-radius: 15px;
-      height: 20%;
-      width: 20%;
-      text-align: center;
-      cursor: pointer;
-      text-align: center;
-  }
-  .zasranej-style{
-      display:inline-block; 
-      justify-content: center;
-      align-items: center;
-      font-size: 200%;
-      background-color: blue; /* For browsers that do not support gradients */
       background-size: 1800% 1800%;
       border: #000 1px solid;
       border-radius: 15px;
